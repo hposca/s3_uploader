@@ -2,7 +2,7 @@ import boto3
 from app import app
 
 s3_endpoint = None
-if app.config['DEVELOPMENT'] == True or app.config['TESTING'] == True:
+if 'DEVELOPMENT' in app.config:
     s3_endpoint = 'http://localstack:4572'
 
 s3 = boto3.client(

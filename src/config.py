@@ -22,4 +22,3 @@ class Development(Config):
 
 class Testing(Config):
     TESTING = True
-    S3_LOCATION = 'http://localhost:4572/{}/'.format(Config.S3_BUCKET)
